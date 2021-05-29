@@ -1,6 +1,5 @@
 use strict;
 use warnings;
-use utf8;
 
 sub gen_title($){
     my $file = $_[0];
