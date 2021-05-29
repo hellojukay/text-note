@@ -6,6 +6,7 @@ sub gen_title($){
     my $file = $_[0];
     open my $fh, '<',$file or warn "can not open file $file";
     my $firstLine = <$fh>; 
+    chomp $firstLine;
     close $file;
     if ($firstLine =~ m/title:/) {
        my @title_line = split /:/ ,$firstLine;
@@ -14,8 +15,16 @@ sub gen_title($){
     return "unknown title";
 }
 
-my @files = glob "src/**/*.txt";
-for my $file (@files){
-    my $title = sprintf "![%s](%s)\n",gen_title($file),$file;
-    print $title;
+open(my $fd, ">README.md");
+print $fd "#note-text\n\n";
+my @dirs = `ls src`;
+for my $dir (@dirs) {
+    chomp $dir;
+    my @files = glob "src/$dir/*.txt";
+    printf $fd  "* [%s](%s)\n" ,$dir,$dir;
+    for my $file (@files){
+        my $title = sprintf "\t* [%s](%s)\n",gen_title($file),$file;
+        print $fd $title;
+    }
 }
+close $fd;
