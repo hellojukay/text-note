@@ -16,7 +16,8 @@ sub gen_title($){
 }
 
 open(my $fd, ">README.md");
-print $fd "#note-text\n\n";
+print $fd "# note-text\n\n";
+print $fd "Table of Contents\n=================\n";
 my @dirs = `ls src`;
 for my $dir (@dirs) {
     chomp $dir;
