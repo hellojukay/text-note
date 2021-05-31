@@ -21,9 +21,9 @@ my @dirs = `ls src`;
 for my $dir (@dirs) {
     chomp $dir;
     my @files = glob "src/$dir/*.txt";
-    printf $fd  "* [%s](%s)\n" ,$dir,$dir;
+    printf $fd  "- %s\n", $dir;
     for my $file (@files){
-        my $title = sprintf "\t* [%s](%s)\n",gen_title($file),$file;
+        my $title = sprintf "\t- [%s](%s)\n",gen_title($file),$file;
         print $fd $title;
     }
 }
