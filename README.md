@@ -10,3 +10,4 @@ Table of Contents
 	- [ 解决 YCM 安装 cmake 报错的问题](src/2021/2021-04-26_22.txt)
 	- [ python 终端简单输出颜色](src/2021/2021-05-07_18.txt)
 	- [ 列出 kubernetes 上 deployment apps 的镜像](src/2021/2021-05-26_15.txt)
+	- [ man 手册的有用法](src/2021/2021-06-04_15.txt)
