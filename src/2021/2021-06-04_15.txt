@@ -1,4 +1,4 @@
-title: man 手册的有用法
+title: man 手册的用法
 
 1. 带选项的用法 man [keyword]
 man ls
