@@ -3,3 +3,6 @@ title: Ocaml 技巧
 1. 静态编译一个 Ocaml 脚本文件
 ocamlopt -ccopt -static -o hello hello.ml
 
+参考文章:
+1. https://www.systutorials.com/how-to-statically-link-ocaml-programs/
+
