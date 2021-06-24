@@ -1,0 +1,5 @@
+title: Ocaml 技巧
+
+1. 静态编译一个 Ocaml 脚本文件
+ocamlopt -ccopt -static -o hello hello.ml
+
