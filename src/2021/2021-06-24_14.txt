@@ -3,6 +3,9 @@ title: Ocaml 技巧
 1. 静态编译一个 Ocaml 脚本文件
 ocamlopt -ccopt -static -o hello hello.ml
 
+2. 相同目录下的文件直接当成模块使用
+hello.ml 在本目录的其他文件中，可以直接 Open hello
+
 参考文章:
 1. https://www.systutorials.com/how-to-statically-link-ocaml-programs/
 
