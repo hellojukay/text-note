@@ -1,0 +1,10 @@
+title: webpack 学习
+
+1. webpack 是什么？
+webpack 是一个打包工具(不是编译工具),他负责将从一个入口文件开始，递归的打包这个入口文件所依赖的所有资源
+
+2. 默认的配置文件是什么
+webpack.config.js
+
+3. 打包命令
+webpack 或者 webpack --config webpack.config.js
