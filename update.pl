@@ -29,3 +29,8 @@ for my $dir (@dirs) {
     }
 }
 close $fd;
+
+# 提交代码
+system("git add .");
+system("git commit -m 'update'");
+system("git push");

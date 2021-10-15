@@ -1,0 +1,12 @@
+title: perl 小技巧
+
+1. 实用函数
+
+# 删除字符串左右空格
+sub trim ($) {
+    my $s = shift;
+    $s =~ s/^\s+|\s+$//g;
+    return $s
+}
+
+
