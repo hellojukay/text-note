@@ -9,4 +9,33 @@ sub trim ($) {
     return $s
 }
 
+2. perl 多线程消费
+
+use threads;
+use Thread::Queue;
+
+my $q = Thread::Queue->new()
+
+sub work ($) {
+    while(my $task = $q->dequeue()){
+        last unless($task);
+        
+        # do somthing
+    }
+}
+
+# enqueue
+async {
+    $q->queque(...)
+}
+
+# create threads
+foreach(0..4) {
+    thread->create(\&work);
+}
+
+# wait all thread finish
+foreach(threads->list()) {
+    $_->join();
+}
 
