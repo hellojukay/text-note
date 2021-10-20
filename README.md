@@ -18,3 +18,4 @@ Table of Contents
 	- [ webpack 学习](src/2021/2021-09-13_14.txt)
 	- [ perl 小技巧](src/2021/2021-10-15_11.txt)
 	- [ jenkins 小技巧](src/2021/2021-10-15_17.txt)
+	- [ vim 使用技巧](src/2021/2021-10-20_11.txt)
