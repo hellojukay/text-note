@@ -39,3 +39,19 @@ foreach(threads->list()) {
     $_->join();
 }
 
+
+3. 统计 ip 访问，倒序结果
+
+my %hash;
+while(<>){
+    if(/(\d+\.\d+\.\d+\.\d+)/){
+        my $value = $hash{$1} ? $hash{$1} : 0;
+        $hash{$1} = $value + 1;
+    }
+}
+
+my @keys = sort { $hash{$a} <=> $hash{$b} } keys(%hash);
+foreach my $key (reverse @keys) {
+    printf("%-15s%s\n",$key,$hash{$key});
+}
+
