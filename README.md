@@ -19,3 +19,4 @@ Table of Contents
 	- [ perl 小技巧](src/2021/2021-10-15_11.txt)
 	- [ jenkins 小技巧](src/2021/2021-10-15_17.txt)
 	- [ vim 使用技巧](src/2021/2021-10-20_11.txt)
+	- [ 解决 centos7 上 perl 找不到 JSON](src/2021/2021-11-10_17.txt)
