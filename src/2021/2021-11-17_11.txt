@@ -1,0 +1,9 @@
+title: windows 更新本地证书列表
+
+转载: https://www.sohu.com/a/483126111_121200070
+
+certutil.exe -generateSSTFromWU roots.sst
+$sstStore = ( Get-ChildItem -Path "$pwd\roots.sst" )
+$sstStore | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+
+
