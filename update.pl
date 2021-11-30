@@ -4,13 +4,10 @@ use warnings;
 
 sub gen_title($){
     my $file = $_[0];
-    open my $fh, '<',$file or warn "can not open file $file";
-    my $firstLine = <$fh>; 
-    chomp $firstLine;
-    close $file;
-    if ($firstLine =~ m/title:/) {
-       my @title_line = split /:/ ,$firstLine;
-       return $title_line[1];
+    my $title = `grep title -m 1 $file`;
+    if ($title =~ m/title:/) {
+       my @title = split /:/ ,$title;
+       return $title[1];
     }
     return "unknown title";
 }
