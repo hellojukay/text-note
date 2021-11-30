@@ -21,9 +21,10 @@ print $fd "Table of Contents\n=================\n";
 my @dirs = `ls src`;
 for my $dir (@dirs) {
     chomp $dir;
-    my @files = glob "src/$dir/*.[txt|md]";
+    my @files = glob "src/$dir/*";
     printf $fd  "- %s\n", $dir;
     for my $file (@files){
+        next if( not -f $file);
         my $title = sprintf "\t- [%s](%s)\n",gen_title($file),$file;
         print $fd $title;
     }
