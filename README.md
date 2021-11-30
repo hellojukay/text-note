@@ -25,3 +25,4 @@ Table of Contents
 	- [ vim 使用技巧](src/2021/2021-10-20_11.txt)
 	- [ 解决 centos7 上 perl 找不到 JSON](src/2021/2021-11-10_17.txt)
 	- [ windows 更新本地证书列表](src/2021/2021-11-17_11.txt)
+	- [ archlinux 安装中文输入法](src/2021/2021-11-21_16.txt)
