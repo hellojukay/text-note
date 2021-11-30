@@ -5,6 +5,7 @@ use warnings;
 sub gen_title($){
     my $file = $_[0];
     my $title = `grep title -m 1 $file`;
+    $title = $title =~ s/\r?\n//r;
     if ($title =~ m/title:/) {
        my @title = split /:/ ,$title;
        return $title[1];
