@@ -7,7 +7,7 @@ stage('xxx'){
     steps{
         script {
             currentBuild.name ="MY_VERSION_NUMBER"
-              currentBuild.description ="MY_PROJECT MY_VERSION_NUMBER"
+            currentBuild.description ="MY_PROJECT MY_VERSION_NUMBER"
         }
     }
 }
