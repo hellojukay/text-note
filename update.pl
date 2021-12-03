@@ -22,7 +22,7 @@ my @dirs = `ls src`;
 for my $dir (@dirs) {
     chomp $dir;
     my @files = reverse( glob "src/$dir/*" );
-    printf $fd "<h2>%s<h2>", $dir;
+    printf $fd "<h2>%s</h2>", $dir;
     printf $fd "<ul>";
     for my $file (@files) {
         next if ( not -f $file );
