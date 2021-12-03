@@ -25,7 +25,7 @@ for my $dir (@dirs) {
     printf $fd "<ul>";
     for my $file (@files) {
         next if ( not -f $file );
-        my $title = sprintf "<a href=\"%s\">%s</a>", $file, gen_title($file);
+        my $title = sprintf "<li><a href=\"%s\">%s</a></li>", $file, gen_title($file);
         print $fd $title;
     }
     printf $fd "</ul>";
