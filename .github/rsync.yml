@@ -1,0 +1,15 @@
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@5.1
+      with:
+        switches: -avzr --delete --exclude=".git" --include="" --filter=""
+        path: ./
+        remote_path: /opt/text-note/
+        remote_host: blog.hellojukay.cn
+        remote_port: 22
+        remote_user: lighthouse
+        remote_key: ${{ secrets.DEPLOY_KEY }}
