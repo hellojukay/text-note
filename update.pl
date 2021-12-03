@@ -15,6 +15,7 @@ sub gen_title($) {
 
 open( my $fd, ">README.md" );
 print $fd "<html><body>";
+printf $fd "<pre>最近更新: %s</pre>", `date -u +"%Y-%m-%d %h:%M:%S"`;
 print $fd "<pre># note-text\n\n</pre>";
 print $fd "<pre>Table of Contents\n=================\n</pre>";
 my @dirs = `ls src`;
