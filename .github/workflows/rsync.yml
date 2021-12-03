@@ -7,7 +7,7 @@ jobs:
     - name: rsync deployments
       uses: burnett01/rsync-deployments@5.1
       with:
-        switches: -avzr --delete --exclude=".git" --include="" --filter=""
+        switches: -avzr --delete --exclude=".github" --exclude=".git" --include="" --filter=""
         path: ./
         remote_path: /opt/text-note/
         remote_host: blog.hellojukay.cn
