@@ -15,8 +15,8 @@ sub gen_title($) {
 
 open( my $fd, ">README.md" );
 print $fd "<html><body>";
-print $fd "# note-text\n\n";
-print $fd "Table of Contents\n=================\n";
+print $fd "<pre># note-text\n\n</pre>";
+print $fd "<pre>Table of Contents\n=================\n</pre>";
 my @dirs = `ls src`;
 @dirs = reverse( sort @dirs );
 for my $dir (@dirs) {
