@@ -29,7 +29,7 @@ for my $dir (@dirs) {
         print $fd $title;
     }
     printf $fd "</ul>";
-    printf $fd "<hr />", $dir;
+    printf $fd "<hr />";
 }
 close $fd;
 
