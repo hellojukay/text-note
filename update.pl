@@ -14,6 +14,7 @@ sub gen_title($) {
 }
 
 open( my $fd, ">README.md" );
+print $fd "<html><body>";
 print $fd "# note-text\n\n";
 print $fd "Table of Contents\n=================\n";
 my @dirs = `ls src`;
@@ -31,6 +32,7 @@ for my $dir (@dirs) {
     printf $fd "</ul>";
     printf $fd "<hr />";
 }
+print $fd "</body></html>";
 close $fd;
 
 # 提交代码
