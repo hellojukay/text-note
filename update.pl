@@ -12,7 +12,15 @@ sub gen_title($) {
     }
     return "unknown title";
 }
-
+# 获取文件日期
+sub get_date($) {
+    $_ = shift;
+    print "$_\n";
+    if(m/(\d\d\d\d)[-]?(\d\d)[-]?(\d\d)/) {
+        return $1 . "-" . "$2" . "-" . $3;
+    }
+    return "";
+}
 open( my $fd, ">README.md" );
 print $fd "<html><body>";
 printf $fd "<pre>最近更新: %s</pre>", `date +"%Y-%m-%d %H:%M:%S"`;
@@ -24,10 +32,10 @@ for my $dir (@dirs) {
     chomp $dir;
     my @files = reverse( glob "src/$dir/*" );
     printf $fd "<h2>%s</h2>", $dir;
-    printf $fd "<ul>";
+    printf $fd "<ul style=\"list-style: none;\">";
     for my $file (@files) {
         next if ( not -f $file );
-        my $title = sprintf "<li><a href=\"%s\">%s</a></li>", $file, gen_title($file);
+        my $title = sprintf "<li><a href=\"%s\">[%s]&nbsp&nbsp%s</a></li>", $file, get_date($file), gen_title($file);
         print $fd $title;
     }
     printf $fd "</ul>";
