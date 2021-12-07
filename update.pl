@@ -31,7 +31,7 @@ my @dirs = `ls src`;
 for my $dir (@dirs) {
     chomp $dir;
     my @files = reverse( glob "src/$dir/*" );
-    printf $fd "<h2>%s</h2>", $dir;
+    printf $fd "<h2 id=\"%s\">%s</h2>", $dir, $dir;
     printf $fd "<ul style=\"list-style: none;\">";
     for my $file (@files) {
         next if ( not -f $file );
