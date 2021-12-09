@@ -2,15 +2,17 @@ title: perl 小技巧
 
 1. 实用函数
 
+```perl
 # 删除字符串左右空格
 sub trim ($) {
     my $s = shift;
     $s =~ s/^\s+|\s+$//g;
     return $s
 }
+```
 
 2. perl 多线程消费
-
+```perl
 use threads;
 use Thread::Queue;
 
@@ -38,10 +40,10 @@ foreach(0..4) {
 foreach(threads->list()) {
     $_->join();
 }
-
+```
 
 3. 统计 ip 访问，倒序结果
-
+```perl
 my %hash;
 while(<>){
     if(/(\d+\.\d+\.\d+\.\d+)/){
@@ -54,7 +56,7 @@ my @keys = sort { $hash{$a} <=> $hash{$b} } keys(%hash);
 foreach my $key (reverse @keys) {
     printf("%-15s%s\n",$key,$hash{$key});
 }
-
+```
 
 3. 一些实用的 Perl 内置变量
 
