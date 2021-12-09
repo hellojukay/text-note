@@ -1,9 +1,10 @@
+---
 title: 列出 kubernetes 上 deployment apps 的镜像
-
+---
 
 今天盼哥问我说怎么看每个服务的版本，我说可以通过 kubectl describe pod 看，盼哥表示太麻烦了，于是我用 perl 写
 了一个脚本，如下:
-
+```perl
 #!/bin/perl
 use strict;
 use warnings;
@@ -67,9 +68,9 @@ _EOC_
     warn $msg;
     exit($rc);
 }
-
+```
 命名为 check, 执行 check -h 可以看到帮助信息
-
+```txt
 check [options] list kubernetes deployment image version.
 
 Options:
@@ -85,3 +86,4 @@ Options:
     --help                Print this help.
 
 Copyright (C) QAX (DAYU) .
+```
