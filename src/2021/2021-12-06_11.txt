@@ -1,7 +1,8 @@
+---
 title: 内存分析工具 smem
-
+---
 下载地址: https://www.selenic.com/smem/download/
-
+```python2
 #!/usr/bin/env python2
 #
 # smem - a tool for meaningful memory reporting
@@ -691,9 +692,11 @@ except IOError, e:
         pass
 except KeyboardInterrupt:
     pass
-
+```
 
 参考地址:
+```txt
 * https://www.cnblogs.com/kerrycode/p/5079319.html
 * https://www.golinuxcloud.com/check-memory-usage-per-process-linux/
 * https://www.selenic.com/smem/download/
+```

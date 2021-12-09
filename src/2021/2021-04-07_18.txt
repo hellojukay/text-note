@@ -1,6 +1,6 @@
-```
+---
 title: 安装 ceph-common 14.2.10 版本
-```
+---
 在 k8s 中使用 ceph 当作存储，需要在每一个节点上都安装 ceph-common 包，我们这里安装的是 14.2.10 版本
 
 首先添加 /etc/yum.repos.d/repo
