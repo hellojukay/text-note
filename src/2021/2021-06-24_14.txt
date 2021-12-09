@@ -16,7 +16,7 @@ dune 项目静态编译可以参考 https://www.ocamlpro.com/2021/09/02/generati
 hello.ml 在本目录的其他文件中，可以直接 Open hello
 
 3. Ocaml 发送 post 请求，并且设置 header 和 body
-```OCaml
+```ocaml
 open Lwt
 
 let body =
