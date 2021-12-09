@@ -1,9 +1,8 @@
+---
 title: Go编写命令行添加alias的方法
-
-参考 https://github.com/golang/go/issues/35761#issuecomment-559207341
-
-代码如下
-
+---
+参考 https://github.com/golang/go/issues/35761#issuecomment-559207341 , 代码如下
+```go
 package main
 
 import "flag"
@@ -14,9 +13,9 @@ func main() {
 	flag.Parse()
 	println(*name)
 }
-
+```
 编译
-
+```bash
 hellojukay@local test $ go build
 hellojukay@local test $ ./test -h
 Usage of ./test:
@@ -24,3 +23,4 @@ Usage of ./test:
         alais for --name
   -name string
         your name
+```
