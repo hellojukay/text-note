@@ -1,5 +1,7 @@
+---
 title: 发布 cargo 包到 crates 官方仓库的方法
-
+---
+```txt
 1. 登录 https://crates.io ，完成 github.com 的登录授权，然后在个人
    主页面中进入 Account Settingss 完成如下工作:
    
@@ -32,4 +34,4 @@ cargo login <token here>
   Q: warning: manifest has no description, license, license-file, documentation, homepage or repository.
   A: 务必在项目的 Cargo.toml 文件中配置好 license, document, homepage , description 字段
 
-
+```
