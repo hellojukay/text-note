@@ -1,5 +1,7 @@
+---
 title: coredns 创建泛域名解析
-
+---
+```txt
 例子如下:
 
 .:53 {
@@ -23,3 +25,4 @@ title: coredns 创建泛域名解析
 
 文本参考:
   1. https://www.1nth.com/post/coredns_diy/
+```
