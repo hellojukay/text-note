@@ -1,5 +1,7 @@
+---
 title: man 手册的用法
-
+---
+```txt
 1. 带选项的用法 man [keyword]
 man ls
 
@@ -25,3 +27,4 @@ cd-it8 (1)           - Color Manager Testing Tool
 5. man -I [keyword] 严格区分大小写
 hellojukay@local ~ $ man -I BAsh
 没有 BAsh 的手册页条目
+```

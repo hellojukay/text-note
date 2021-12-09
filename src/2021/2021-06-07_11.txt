@@ -1,7 +1,8 @@
+---
 title: envsubst 在 perl 的实现
-
+---
 代码来源: https://metacpan.org/source/PEVANS/String-Expand-0.04/lib/String/Expand.pm
-
+```perl
 #!/usr/bin/env perl
 my $VARNAME_MATCH = qr/\$([A-Z_][A-Z0-9_]*|\{.*?\})/;
 
@@ -82,3 +83,4 @@ sub expand_strings($$)
 my $str = "hello $USER";
 print expand_string($str,%ENV) . "\n";
 
+```
