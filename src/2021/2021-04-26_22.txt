@@ -1,5 +1,7 @@
+---
 title: 解决 YCM 安装 cmake 报错的问题
-
+---
+```
 报错信息：
 ERROR: Unable to find cmake executable in any of ['cmake3', 'cmake']. CMake is required to build ycmd
 
@@ -22,3 +24,4 @@ ERROR: the build failed.
 
 解决方案:
 sudo pacman -S make
+```

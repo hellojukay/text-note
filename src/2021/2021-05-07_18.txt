@@ -1,7 +1,8 @@
+---
 title: python 终端简单输出颜色
-
+---
 在 https://stackoverflow.com/questions/287871/how-to-print-colored-text-to-the-terminal 上看到的代码
-
+```python
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -14,15 +15,15 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 print(bcolors.WARNING + "Warning: No active frommets remain. Continue?" + bcolors.ENDC)
-
-
+```
+```txt
 python 3.6+ 如下：
 
 print(f"{bcolors.WARNING}Warning: No active frommets remain. Continue?{bcolors.ENDC}")
 
-
+```
 也有更加高级一点的，能够设置字体颜色
-
+```python
 class colors:
     '''Colors class:
     Reset all colors with colors.reset
@@ -65,3 +66,4 @@ class colors:
         purple='\033[45m'
         cyan='\033[46m'
         lightgrey='\033[47m'
+```
