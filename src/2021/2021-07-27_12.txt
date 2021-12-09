@@ -1,5 +1,7 @@
+---
 title: 几个终端代码演示图片工具
-
+---
+```txt
 1. t-rec 是一个 rust 编写的终端录屏工具
  https://github.com/sassman/t-rec-rs
 
@@ -11,3 +13,4 @@ t-rec -d none -b black
 
 推荐命令行,设置背景为白色
 silicon -b=\#FFFFFF
+```
