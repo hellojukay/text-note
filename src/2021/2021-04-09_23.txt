@@ -1,5 +1,6 @@
+---
 title: windows 搭建 rust 开发环境【免安装 VS Studio】
-
+---
 本文介绍使用 MYSYS2 在 windows 上安装 rust 开发环境，首先我们需要安装 rustup,这个可以参见官网：
 ```
 https://www.rust-lang.org/
