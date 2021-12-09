@@ -1,9 +1,9 @@
+---
 title: archlinux 安装中文输入法
-
+---
 转载: https://zhuanlan.zhihu.com/p/393746270
 
------------------------------------
-
+```txt
 Arch Linux可以安装安装fcitx5 实现输入中文，具体步骤如下
 
 sudo pacman -S fcitx5-im  # 默认所有都装
@@ -26,3 +26,4 @@ SDL_IM_MODULE=fcitx
 对于i3-wm,可以在配置文件~/.config/i3/config中添加如下代码
 # fcitx5
 exec_always --no-startup-id fcitx5
+```

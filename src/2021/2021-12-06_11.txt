@@ -2,7 +2,8 @@
 title: 内存分析工具 smem
 ---
 下载地址: https://www.selenic.com/smem/download/
-```python2
+
+```python
 #!/usr/bin/env python2
 #
 # smem - a tool for meaningful memory reporting
