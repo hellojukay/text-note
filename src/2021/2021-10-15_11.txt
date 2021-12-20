@@ -62,7 +62,7 @@ foreach my $key (reverse @keys) {
 3. 一些实用的 Perl 内置变量
 
 https://www.runoob.com/perl/perl-special-variables.html
-
+```
 $_	默认输入和模式匹配内容。
 $ARG
 $.	前一次读的文件句柄的当前行号
@@ -230,4 +230,4 @@ $^
 当前报表输出表头格式的名称。默认值是带后缀"_TOP"的文件句柄名。
 $FORMAT_TOP_NAME
 
-
+```
