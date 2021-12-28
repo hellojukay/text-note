@@ -7,8 +7,9 @@ git 经常会搞乱配置
   将私人邮箱推送到 gitlab
 
 所有有必要将2套环境的配置分开，在 git 的 2.13 版本加入了 includeIf 功能：在不同的目录导入不同的配置。
-见: https://stackoverflow.com/questions/8801729/is-it-possible-to-have-different-git-configuration-for-different-projects
+见:
 </pre>
+ https://stackoverflow.com/questions/8801729/is-it-possible-to-have-different-git-configuration-for-different-projects
 ```toml
 [user]
     name = xiaowang
