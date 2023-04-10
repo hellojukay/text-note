@@ -35,7 +35,7 @@ for my $dir (@dirs) {
     printf $fd "<ul style=\"list-style: none;\">";
     for my $file (@files) {
         next if ( not -f $file );
-        my $title = sprintf "<li>%s<a href=\"%s\"> %s</a></li> -- %s", gen_title($file),$file,  get_date($file),;
+        my $title = sprintf "<li><a href=\"%s\"> %s</a></li> -- %s", gen_title($file),$file,  get_date($file),;
         print $fd $title;
     }
     printf $fd "</ul>";
