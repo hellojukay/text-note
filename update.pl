@@ -42,7 +42,6 @@ for my $dir (@dirs) {
 print $fd "</body></html>";
 close $fd;
 
-system("rm -rf index.html && cp README.md index.html");
 # 提交代码
 system("git add .");
 system("git commit -m 'update'");
