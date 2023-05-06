@@ -22,7 +22,7 @@ sub get_date($) {
     return "";
 }
 open( my $fd, ">README.md" );
-print $fd "<html><body>";
+print $fd "<html><body>\n";
 printf $fd "<pre>最近更新: %s</pre>", `date +"%Y-%m-%d %H:%M:%S"`;
 my @dirs = `ls src`;
 @dirs = reverse( sort @dirs );
@@ -33,7 +33,7 @@ for my $dir (@dirs) {
     printf $fd "<ul style=\"list-style: none;\">";
     for my $file (@files) {
         next if ( not -f $file );
-        my $title = sprintf "<li> <a href=\"%s\"> %s</a> —— %s</li>",  $file, gen_title($file),get_date($file);
+        my $title = sprintf "<li> <a href=\"%s\"> %s</a> —— %s</li>\n",  $file, gen_title($file),get_date($file);
         print $fd $title;
     }
     printf $fd "</ul>";
