@@ -24,8 +24,6 @@ sub get_date($) {
 open( my $fd, ">README.md" );
 print $fd "<html><body>";
 printf $fd "<pre>最近更新: %s</pre>", `date +"%Y-%m-%d %H:%M:%S"`;
-print $fd "<pre># note-text\n\n</pre>";
-print $fd "<pre>Table of Contents\n=================\n</pre>";
 my @dirs = `ls src`;
 @dirs = reverse( sort @dirs );
 for my $dir (@dirs) {
